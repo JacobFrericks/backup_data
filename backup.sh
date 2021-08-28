@@ -4,14 +4,10 @@ AWS_S3_BUCKET="Backup"
 
 GPG_EMAIL=$1
 if [ -z "$GPG_EMAIL" ]; then
-  CURL_CMD="curl \${line} \
-      | aws s3 cp - \"s3://\${AWS_S3_BUCKET}/\${filename}\" \
-        --storage-class DEEP_ARCHIVE"
+  CURL_CMD="curl \${line} --output \${filename}"
 else
   CURL_CMD="curl \${line} \
-      | gpg --encrypt -r \${GPG_EMAIL} --trust-model always --output \${filename} \
-      | aws s3 cp - \"s3://\${AWS_S3_BUCKET}/\${filename}\" \
-        --storage-class DEEP_ARCHIVE"
+      | gpg --encrypt -r \${GPG_EMAIL} --trust-model always --output \${filename}"
 fi
 
 for file in *.txt; do
