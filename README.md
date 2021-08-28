@@ -17,6 +17,7 @@ First time use:
 \* Can be skipped if starting from a previously shutdown ec3 instance
 
 \** Skip this step and leave out the email parameter when running the script to avoid encryption before uploading
+
 That's it! The script will go through all txt files and download each url to your Glacier vault bucket
 
 Taken and edited from https://gunargessner.com/takeout
