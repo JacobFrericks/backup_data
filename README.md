@@ -7,7 +7,7 @@ Steps to use:
 1. Wait for Google Takeout or Facebook Downloads to finish processing
 1. \* Spin up an ec2 instance AWS in a region somewhere with cheap storage, like US-East (Ohio)
 1. \* \*\* Import your GPG public key into the new ec2 virtual machine
-1. \* Create a Glacier bucket called "backup"
+1. \* Create a s3 bucket called "backup"
 1. From a computer, with Firefox, click to download each of the files, and then cancel all of the downloads.
 1. In Firefox, go to the downloads manager, and for each cancelled download, right click, then choose “Copy Download Link”.
 1. Copy the link to the AWS EC2 instance, in a file ending in ".txt", such as "google.txt". The first line in this file MUST be the extension used. ie "zip"
