@@ -20,7 +20,6 @@ for file in *.txt; do
   while read line; do
     if [ "$count" -eq "0" ]; then
       extension=${line}
-      count=$((count+1))
       continue
     fi
     filename=${file%.*}_${count}.${extension}
