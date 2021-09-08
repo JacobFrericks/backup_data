@@ -6,12 +6,12 @@ GPG_EMAIL=$2
 if [ -z "$GPG_EMAIL" ]; then
   CURL_CMD="curl \${line} \
       | aws s3 cp - \"s3://\${AWS_S3_BUCKET}/\${filename}\" \
-        --storage-class DEEP_ARCHIVE"
+        --storage-class DEEP_ARCHIVE
 else
   CURL_CMD="curl \${line} \
       | gpg --encrypt -r \${GPG_EMAIL} --trust-model always --output \${filename} \
       | aws s3 cp - \"s3://\${AWS_S3_BUCKET}/\${filename}\" \
-        --storage-class DEEP_ARCHIVE"
+        --storage-class DEEP_ARCHIVE
 fi
 
 for file in *.txt; do
