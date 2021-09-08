@@ -1,7 +1,7 @@
 # Backup Data
 Backup data from websites such as Facebook or Google Takeout
 
-Note: You can run this script without copy/pasting or even cloning! Simply run `bash <(curl -s https://raw.githubusercontent.com/JacobFrericks/backup_data/main/backup.sh) email@email.com`
+Note: You can run this script without copy/pasting or even cloning! Simply run `bash <(curl -s https://raw.githubusercontent.com/JacobFrericks/backup_data/main/backup.sh) backup email@email.com`
 
 Steps to use:
 1. Wait for Google Takeout or Facebook Downloads to finish processing
