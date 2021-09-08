@@ -1,8 +1,8 @@
 ##!/usr/bin/env bashm
 
-AWS_S3_BUCKET="Backup"
+AWS_S3_BUCKET=$1
 
-GPG_EMAIL=$1
+GPG_EMAIL=$2
 if [ -z "$GPG_EMAIL" ]; then
   CURL_CMD="curl \${line} \
       | aws s3 cp - \"s3://\${AWS_S3_BUCKET}/\${filename}\" \
