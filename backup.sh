@@ -1,4 +1,4 @@
-##!/usr/bin/env bashm
+#!/usr/bin/env bash
 
 AWS_S3_BUCKET=$1
 
