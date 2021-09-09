@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 AWS_S3_BUCKET=$1
 
