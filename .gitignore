@@ -1,3 +1,9 @@
 .idea/
+.vscode/
+__pycache__/
+
 tf/.terraform
 tf/terraform.tfstate*
+NOTES.donotmerge
+tf/data/import.gpg
+tf/data/data.json
